@@ -27,8 +27,3 @@ python main.py
 cd TC-Diffuser
 python main.py
 ```
-
-## Visualization Results
-![image](https://github.com/Zjut-MultimediaPlus/TC-Diffuser/tree/main/GIF%20diagram%20of%20the%20prediction%20uncertainty%20reduction%20process/traj.gif)
-![image](https://github.com/Zjut-MultimediaPlus/TC-Diffuser/tree/main/GIF%20diagram%20of%20the%20prediction%20uncertainty%20reduction%20process/pressure.gif)
-![image](https://github.com/Zjut-MultimediaPlus/TC-Diffuser/tree/main/GIF%20diagram%20of%20the%20prediction%20uncertainty%20reduction%20process/wind.gif)
