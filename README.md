@@ -1,5 +1,5 @@
 # TC-Diffuser
-This project includes the code of our deep learning TC forecasting method TC-Diffuser.
+The code of "TC-Diffuser: Bi-Condition Multi-Modal Diffusion for Tropical Cyclone Forecasting" accepted by AAAI2025.
 
 ## Requirements 
 * python 3.8.8
