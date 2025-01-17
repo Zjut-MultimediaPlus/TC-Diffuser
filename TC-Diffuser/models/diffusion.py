@@ -214,14 +214,18 @@ class TransformerConcatLinear(Module):
         self.concat1 = ConcatSquashLinear(point_dim, 2 * context_dim,
                                           context_dim + 3)  # context_dim:384?  #ctx_emb:torch.Size([B, 1, 387]) x:torch.Size([B, 4, 4])
         #_type1
-        self.concat_env_age_x_traj_type1 = ConcatSquashLinear(2, 2, 32)
-        self.concat_env_age_x_inten_type1 = ConcatSquashLinear(1, 1, 36)
-        self.concat_env_age_x_wind_type1 = ConcatSquashLinear(1, 1, 20)  # x的输入维度,输出的维度，ctx的输入维度
+        # self.concat_env_age_x_traj_type1 = ConcatSquashLinear(2, 2, 32)
+        # self.concat_env_age_x_inten_type1 = ConcatSquashLinear(1, 1, 36)
+        # self.concat_env_age_x_wind_type1 = ConcatSquashLinear(1, 1, 20)  # x的输入维度,输出的维度，ctx的输入维度
 
-        self.concat1_type2 = ConcatSquashLinear(point_dim, 2 * context_dim, 347)
-        self.concat3_type2 = ConcatSquashLinear(2 * context_dim, context_dim, 347)
-        self.concat4_type2 = ConcatSquashLinear(context_dim, context_dim // 2, 347)
-        self.linear_type2 = ConcatSquashLinear(context_dim // 2, point_dim, 347)
+        # self.concat1_type2 = ConcatSquashLinear(point_dim, 2 * context_dim, 347)
+        # self.concat3_type2 = ConcatSquashLinear(2 * context_dim, context_dim, 347)
+        # self.concat4_type2 = ConcatSquashLinear(context_dim, context_dim // 2, 347)
+        # self.linear_type2 = ConcatSquashLinear(context_dim // 2, point_dim, 347)
+
+        #=======================================================
+        # Missing key(s) in state_dict: ,
+        #========================================================
     # self.net(c0 * x_0 + c1 * e_rand, beta=beta, context=context,
     #                            encoded_age = encoded_age)
 
@@ -341,7 +345,7 @@ class TransformerConcatLinear(Module):
     def forward(self, x, beta, context
                 , encoded_age,encoded_env_data
                 ):
-        trans = self.pshare_and_ptask(x, beta, context
+        trans = self.ptask_then_pshare(x, beta, context
                 , encoded_age,encoded_env_data)
         return trans
 
