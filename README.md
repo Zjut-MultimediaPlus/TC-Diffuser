@@ -27,3 +27,5 @@ python main.py
 cd TC-Diffuser
 python main.py
 ```
+## Acknowledgement
+Part of our code is borrowed from [MID](https://github.com/Gutianpei/MID). We thank the authors for releasing their code and models.
